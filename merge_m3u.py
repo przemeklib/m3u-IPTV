@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import json
 import re
 import sys
@@ -268,7 +269,7 @@ def rule_matches(rule, extinf):
     return True
 
 
-def apply_rules(entry, rules):
+def apply_rules(entry, rules, unify_name=False):
     extinf = entry[0]
     changed = False
     forced_chno = False
@@ -326,6 +327,13 @@ def apply_rules(entry, rules):
             )
             changed = True
 
+        # Opcjonalnie ustaw nazwę po przecinku na tvg_id z pasującej reguły.
+        # Celowo wykonujemy to na końcu, aby --unify_name miało pierwszeństwo
+        # przed ewentualnym polem action.name.
+        if unify_name and "tvg_name" in action:
+            extinf = set_display_name(extinf, str(action["tvg_name"]))
+            changed = True
+
         entry[0] = extinf
         break
 
@@ -373,6 +381,16 @@ def assign_channel_numbers(entries, forced_flags):
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Łączenie list M3U z obsługą reguł i usuwaniem duplikatów."
+    )
+    parser.add_argument(
+        "--unify_name",
+        action="store_true",
+        help="Ustaw nazwę kanału po przecinku na tvg_id z pasującej reguły.",
+    )
+    args = parser.parse_args()
+
     try:
         sources = load_sources()
         rules = load_rules()
@@ -432,6 +450,7 @@ def main():
         updated, was_changed, forced_chno = apply_rules(
             original_entry.copy(),
             rules,
+            unify_name=args.unify_name,
         )
 
         if updated is None:
