@@ -4,7 +4,6 @@ Funkcje:
 - dowolna liczba źródeł lokalnych i HTTP(S),
 - deduplikacja wyłącznie po identycznym adresie streamu,
 - delete, tvg-id, name, group-title,
-- dopasowanie po wielu polach jednocześnie (AND),
 - regex dla pól match,
 - zachowanie pozostałych danych wpisu.
 
