@@ -9,7 +9,7 @@ Funkcje:
 
 Uruchomienie:
     python merge_m3u.py
-    python merge_m3u.py --unify_name - nazwa po , taka sama jak tvg-name przydatne z wieloma klientami 
+    python merge_m3u.py --unify_name - nazwa po , taka sama jak tvg-name przydatne z klientami (Jellyfin, TiVIMate itd.)
 
 Wynik:
     merged.m3u
