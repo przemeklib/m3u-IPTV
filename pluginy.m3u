@@ -1,0 +1,31 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="TV REPUBLIKA" tvg-name="TV REPUBLIKA" group-title="PLUGINY",TV REPUBLIKA
+plugin://plugin.video.youtube/play/?video_id=dzntyCTgJMQ
+
+#EXTINF:-1 tvg-id="Biznes 24" tvg-name="Biznes 24" group-title="PLUGINY",Biznes 24
+plugin://plugin.video.youtube/play/?video_id=0dL2w6ybTuU
+
+#EXTINF:-1 tvg-id="wPolsce24" tvg-name="wPolsce24" group-title="PLUGINY",wPolsce24
+plugin://plugin.video.youtube/play/?video_id=kQ61Qr_nfVU
+
+#EXTINF:-1 tvg-id="Polsat News" tvg-name="Polsat News" group-title="PLUGINY",Polsat News
+plugin://plugin.video.polsat_news/?mode=playTV&cid=431
+
+#EXTINF:-1 tvg-id="Polsat" tvg-name="Polsat" group-title="PLUGINY",Polsat
+plugin://plugin.video.polsat_news/?mode=playTV&cid=5
+
+#EXTINF:-1 tvg-id="TV4" tvg-name="TV4" group-title="PLUGINY",TV4
+plugin://plugin.video.polsat_news/?mode=playTV&cid=18
+
+#EXTINF:-1 tvg-id="TVP INFO" tvg-name="TVP INFO" group-title="PLUGINY",TVP INFO
+plugin://plugin.video.youtube/play/?video_id=3jKb-uThfrg
+
+#EXTINF:-1 tvg-id="Euronews HD" tvg-name="Euronews HD" group-title="PLUGINY",Euronews HD
+plugin://plugin.video.youtube/play/?video_id=pykpO5kQJ98
+
+#EXTINF:-1 tvg-id="Euronews Polska" tvg-name="Euronews Polska" group-title="PLUGINY",Euronews Polska
+plugin://plugin.video.youtube/play/?video_id=fG7PjdiKaBY
+
+#EXTINF:0 tvg-id="Super Express" group-title="PLUGINY",Super Express
+plugin://plugin.video.se?mode=playFast&cid=se

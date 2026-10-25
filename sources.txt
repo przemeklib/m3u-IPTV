@@ -1,0 +1,6 @@
+# Jedno źródło na linię.
+# Komentarze zaczynające się od # są ignorowane.
+# lista1.m3u
+# /media/kodi/znalezionalistananaruskimforum.m3u
+# https://example.com/playlist.m3u
+#/media/kodi/tvsmartgo.m3u
